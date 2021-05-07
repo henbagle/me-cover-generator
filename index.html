@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Effect Custom Cover Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mass Effect Custom Cover Generator</h1>
+    <p id="statusArea" class="hidden"></p>
+    <div id="formContainer">
+    <form id="massEffectForm" onsubmit="event.preventDefault(); submitForm();">
+        <div>
+            <label for="scene">Scene:</label>
+            <select id="scene" name="scene">
+                <option value="citadel">Citadel</option>
+                <option value="collector-base">Collector Base</option>
+                <option value="eden-prime">Eden Prime</option>
+                <option value="invaded">Invaded Citadel</option>
+                <option value="omega">Omega</option>
+            </select>
+        </div>
+        <div>
+            <label for="side">Morality:</label>
+            <select id="side" name="side">
+                <option value="1">Paragon</option>
+                <option value="2">Neutral</option>
+                <option value="3">Renegade</option>
+            </select>
+        </div>
+        <div>
+            <label for="tier1a">Main Character 1</label>
+            <select id="tier1a" name="tier1a">
+                <option value="ashley">Ashley Williams</option>
+                <option value="garrus">Garrus Vakarian</option>
+                <option value="jack">Jack</option>
+                <option value="legion">Legion</option>
+                <option value="miranda">Miranda Lawson</option>
+                <option value="tali">Tali'Zorah nar Rayya</option>
+                <option value="thane">Thane Krios</option>
+                <option value="urdnot">Urdnot Wrex</option>
+                <option value="liara">Liara T'Soni</option>
+            </select>
+        </div>
+        <div>
+            <label for="tier1b">Main Character 2</label>
+            <select id="tier1b" name="tier1b">
+                <option value="ashley">Ashley Williams</option>
+                <option value="garrus">Garrus Vakarian</option>
+                <option value="jack">Jack</option>
+                <option value="legion">Legion</option>
+                <option value="miranda">Miranda Lawson</option>
+                <option value="tali">Tali'Zorah nar Rayya</option>
+                <option value="thane">Thane Krios</option>
+                <option value="urdnot">Urdnot Wrex</option>
+                <option value="liara">Liara T'Soni</option>
+            </select>
+        </div>
+        <div>
+            <label for="tier2">Trusted Companion</label>
+            <select id="tier2" name="tier2">
+                <option value="ashley">Ashley Williams</option>
+                <option value="edi">EDI</option>
+                <option value="garrus">Garrus Vakarian</option>
+                <option value="grunt">Grunt</option>
+                <option value="jack">Jack</option>
+                <option value="jacob">Jacob Taylor</option>
+                <option value="james">James Vega</option>
+                <option value="javik">Javik</option>
+                <option value="kaidan">Kaidan Alenko</option>
+                <option value="kasumi">Kasumi Goto</option>
+                <option value="legion">Legion</option>
+                <option value="miranda">Miranda Lawson</option>
+                <option value="mordin">Mordin Solus</option>
+                <option value="samara">Samara</option>
+                <option value="tali">Tali'Zorah nar Rayya</option>
+                <option value="thane">Thane Krios</option>
+                <option value="urdnot">Urdnot Wrex</option>
+                <option value="zaeed">Zaeed Massani</option>
+                <option value="liara">Liara T'Soni</option>
+            </select>
+        </div>
+        <div>
+            <label for="tier3a">The Cavalry 1</label>
+            <select id="tier3a" name="tier3a">
+                <option value="ashley">Ashley Williams</option>
+                <option value="edi">EDI</option>
+                <option value="garrus">Garrus Vakarian</option>
+                <option value="grunt">Grunt</option>
+                <option value="jack">Jack</option>
+                <option value="jacob">Jacob Taylor</option>
+                <option value="james">James Vega</option>
+                <option value="javik">Javik</option>
+                <option value="kaidan">Kaidan Alenko</option>
+                <option value="kasumi">Kasumi Goto</option>
+                <option value="legion">Legion</option>
+                <option value="miranda">Miranda Lawson</option>
+                <option value="mordin">Mordin Solus</option>
+                <option value="samara">Samara</option>
+                <option value="tali">Tali'Zorah nar Rayya</option>
+                <option value="thane">Thane Krios</option>
+                <option value="urdnot">Urdnot Wrex</option>
+                <option value="zaeed">Zaeed Massani</option>
+                <option value="liara">Liara T'Soni</option>
+            </select>
+        </div>
+        <div>
+            <label for="tier3b">The Cavalry 2</label>
+            <select id="tier3b" name="tier3b">
+                <option value="ashley">Ashley Williams</option>
+                <option value="edi">EDI</option>
+                <option value="garrus">Garrus Vakarian</option>
+                <option value="grunt">Grunt</option>
+                <option value="jack">Jack</option>
+                <option value="jacob">Jacob Taylor</option>
+                <option value="james">James Vega</option>
+                <option value="javik">Javik</option>
+                <option value="kaidan">Kaidan Alenko</option>
+                <option value="kasumi">Kasumi Goto</option>
+                <option value="legion">Legion</option>
+                <option value="miranda">Miranda Lawson</option>
+                <option value="mordin">Mordin Solus</option>
+                <option value="samara">Samara</option>
+                <option value="tali">Tali'Zorah nar Rayya</option>
+                <option value="thane">Thane Krios</option>
+                <option value="urdnot">Urdnot Wrex</option>
+                <option value="zaeed">Zaeed Massani</option>
+                <option value="liara">Liara T'Soni</option>
+            </select>
+        </div>
+        <div>
+            <label for="tier3c">The Cavalry 3</label>
+            <select id="tier3c" name="tier3c">
+                <option value="ashley">Ashley Williams</option>
+                <option value="edi">EDI</option>
+                <option value="garrus">Garrus Vakarian</option>
+                <option value="grunt">Grunt</option>
+                <option value="jack">Jack</option>
+                <option value="jacob">Jacob Taylor</option>
+                <option value="james">James Vega</option>
+                <option value="javik">Javik</option>
+                <option value="kaidan">Kaidan Alenko</option>
+                <option value="kasumi">Kasumi Goto</option>
+                <option value="legion">Legion</option>
+                <option value="miranda">Miranda Lawson</option>
+                <option value="mordin">Mordin Solus</option>
+                <option value="samara">Samara</option>
+                <option value="tali">Tali'Zorah nar Rayya</option>
+                <option value="thane">Thane Krios</option>
+                <option value="urdnot">Urdnot Wrex</option>
+                <option value="zaeed">Zaeed Massani</option>
+                <option value="liara">Liara T'Soni</option>
+            </select>
+        </div>
+        <div>
+            <label for="tier4a">The Backup 1</label>
+            <select id="tier4a" name="tier4a">
+                <option value="ashley">Ashley Williams</option>
+                <option value="edi">EDI</option>
+                <option value="garrus">Garrus Vakarian</option>
+                <option value="grunt">Grunt</option>
+                <option value="jack">Jack</option>
+                <option value="jacob">Jacob Taylor</option>
+                <option value="james">James Vega</option>
+                <option value="javik">Javik</option>
+                <option value="kaidan">Kaidan Alenko</option>
+                <option value="kasumi">Kasumi Goto</option>
+                <option value="legion">Legion</option>
+                <option value="miranda">Miranda Lawson</option>
+                <option value="mordin">Mordin Solus</option>
+                <option value="samara">Samara</option>
+                <option value="tali">Tali'Zorah nar Rayya</option>
+                <option value="thane">Thane Krios</option>
+                <option value="urdnot">Urdnot Wrex</option>
+                <option value="zaeed">Zaeed Massani</option>
+                <option value="liara">Liara T'Soni</option>
+            </select>
+        </div>
+        <div>
+            <label for="tierba">The Backup 2</label>
+            <select id="tier4b" name="tier4b">
+                <option value="ashley">Ashley Williams</option>
+                <option value="edi">EDI</option>
+                <option value="garrus">Garrus Vakarian</option>
+                <option value="grunt">Grunt</option>
+                <option value="jack">Jack</option>
+                <option value="jacob">Jacob Taylor</option>
+                <option value="james">James Vega</option>
+                <option value="javik">Javik</option>
+                <option value="kaidan">Kaidan Alenko</option>
+                <option value="kasumi">Kasumi Goto</option>
+                <option value="legion">Legion</option>
+                <option value="miranda">Miranda Lawson</option>
+                <option value="mordin">Mordin Solus</option>
+                <option value="samara">Samara</option>
+                <option value="tali">Tali'Zorah nar Rayya</option>
+                <option value="thane">Thane Krios</option>
+                <option value="urdnot">Urdnot Wrex</option>
+                <option value="zaeed">Zaeed Massani</option>
+                <option value="liara">Liara T'Soni</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    </div>  
+    <img src="" id="output">
+    <p>Unfortunately I can only get the preview images from the API, the full resolutions appear to be
+        generated on the client side.
+    </p>
+    <script src="main.js"></script>
+</body>
+</html>
